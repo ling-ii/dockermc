@@ -36,8 +36,8 @@ ENV PATH "${JAVA_HOME}/bin:${PATH}"
 #COPY --from=jre-build /minecraft/modules.txt /minecraft
 
 COPY ./start.sh /minecraft
-COPY ./fabric-server-mc.1.20.6-loader.0.15.10-launcher.1.0.1.jar /minecraft
-COPY ./lithium-fabric-mc1.20.6-0.12.3.jar /minecraft/mods/
+COPY ./fabric-server-mc.1.21.1-loader.0.16.4-launcher.1.0.1.jar /minecraft
+COPY ./lithium-fabric-mc1.21.1-0.13.0.jar /minecraft/mods/
 COPY --from=jre-build /jre ${JAVA_HOME}
 
 RUN echo "eula=true" > eula.txt
